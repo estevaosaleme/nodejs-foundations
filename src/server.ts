@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 
 import routes from './routes';
-import logRequests from '../middleware/log';
+import logRequests from './middleware/log';
 
 const app = express();
 
