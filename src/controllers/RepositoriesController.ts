@@ -62,7 +62,6 @@ export default {
         try {
             const { id } = request.params;
             const result = repositories.find(item => id === item.id);
-            console.log(typeof result);
             if (result)
                 return response.status(200).json(result);
             else
@@ -75,9 +74,9 @@ export default {
     remove(request:Request, response:Response){
         try {
             const { id } = request.params;  
-            const itemToBeRemove = repositories.find(item => id === item.id)!;
-            if (itemToBeRemove){
-                repositories.splice(repositories.indexOf(itemToBeRemove, 1)); 
+            const itemToBeRemoved = repositories.find(item => id === item.id)!;
+            if (itemToBeRemoved){
+                repositories.splice(repositories.indexOf(itemToBeRemoved, 1)); 
                 return response.status(204).send();
             } else
                 return response.status(404).send();
