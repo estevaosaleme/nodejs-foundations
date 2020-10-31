@@ -8,7 +8,7 @@ Here I explore the foundations of Node.js using Express and TypeScript. It conta
 
 - **`GET /repositories/:id`**: This route shows the `id` repository;
 
-- **`PUT /repositories/:id`**: This route changes the attributes `title`, a `url` e as `techs` of the `id` repository;
+- **`PUT /repositories/:id`**: This route changes the attributes `title`, `url` and `stack` of the `id` repository;
 
 - **`POST /repositories/:id/like`**: This route increases the number of likes of the `id` repository;
 
