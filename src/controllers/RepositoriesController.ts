@@ -77,7 +77,7 @@ export default {
             const { id } = request.params;  
             const itemToBeRemove = repositories.find(item => id === item.id)!;
             if (itemToBeRemove){
-                repositories.splice(repositories.indexOf(itemToBeRemove, 1)); 
+                repositories.splice(repositories.indexOf(itemToBeRemove), 1);
                 return response.status(204).send();
             } else
                 return response.status(404).send();
