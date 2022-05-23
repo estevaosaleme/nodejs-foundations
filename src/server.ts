@@ -11,6 +11,4 @@ app.use(cors());
 app.use(logRequests);
 app.use(routes);
 
-app.listen(3333);
-
-
+app.listen(process.env.PORT);
