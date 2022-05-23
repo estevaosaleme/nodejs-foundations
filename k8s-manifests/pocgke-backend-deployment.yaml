@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-pocgke-backend
+  labels:
+    app: pod-pocgke-backend
+spec:
+  containers:
+    - name: pocgke-backend-container
+      image: localhost:5000/nodejs-foundations
+      ports:
+        - containerPort: 3333
+      envFrom:
+        - configMapRef:
+            name: configmap-pocgke-backend
